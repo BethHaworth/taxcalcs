@@ -11,7 +11,12 @@ int main()
     cin >> gross;
 
     // define taxable gross salary, after personal allowance
-    float taxablegross = gross - 11500;
+    float taxablegross;
+    if ( gross >= 11500 ){
+        taxablegross = gross - 11500;
+        } else if ( gross < 11500 ){
+        taxablegross = 0;
+    };
     
     // define income tax variable
     float incometax;
